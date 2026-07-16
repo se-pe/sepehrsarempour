@@ -932,4 +932,26 @@ img {
     width: calc(100vw - 20px);
     height: calc(100vh - 20px);
   }
+
+  /* Display type: shrink floors + vw scaling so long single words
+     (SOMETHING, DECORATION, UNMISTAKABLY) don't clip on narrow phones. */
+  .hero-title {
+    font-size: clamp(56px, 17vw, 108px);
+  }
+
+  .hero-title.medium {
+    font-size: clamp(48px, 14vw, 96px);
+  }
+
+  .big-copy {
+    font-size: clamp(36px, 10.5vw, 80px);
+  }
+
+  .statement-title {
+    font-size: clamp(40px, 12vw, 72px);
+  }
+
+  .cta-title {
+    font-size: clamp(40px, 13vw, 72px);
+  }
 }
