@@ -490,6 +490,11 @@ img {
   gap: 18px;
 }
 
+/* When an intro paragraph sits above a grid in the content column */
+.big-copy + .work-grid {
+  margin-top: clamp(32px, 4vw, 56px);
+}
+
 .work-card {
   position: relative;
   min-height: 420px;
