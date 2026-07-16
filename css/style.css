@@ -319,6 +319,15 @@ img {
     radial-gradient(circle at 70% 20%, rgba(255,255,255,0.18), transparent 38%);
 }
 
+/* On portrait screens the wide 16:9 hero gets cropped on the sides, which
+   cuts off the figure (upper-left of the frame). Shift the focal point left
+   so he stays visible. Desktop (16:9, no side crop) is unaffected. */
+@media (max-aspect-ratio: 1 / 1) {
+  .hero.image-hero::before {
+    background-position: 30% center;
+  }
+}
+
 /* Moving tiled logo hero */
 
 .hero.logo-wall-hero {
