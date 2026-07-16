@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sepehr Sarempour — Graphic designer</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      Sepehr<br>Sarempour
+    </a>
+
+    <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
+      <span class="menu-dot"></span>
+      Menu
+    </button>
+  </header>
+
+  <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
+
+  <aside class="menu-panel" id="menuPanel" aria-hidden="true">
+    <div class="menu-top">
+      <span class="menu-title">Navigation</span>
+      <button class="menu-close" onclick="toggleMenu()" aria-label="Close menu">×</button>
+    </div>
+
+    <nav class="menu-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="menu-footer">
+      <span>Creative Direction<br>Brand Systems<br>Visual Concepts</span>
+      <span>Available for selected<br>projects and collaborations.</span>
+    </div>
+  </aside>
+
+  <main>
+
+    <section class="hero image-hero">
+      <div class="hero-content">
+<div class="hero-text reveal">
+        <p class="hero-kicker">Portfolio / Selected Work</p>
+
+          <p class="hero-description">
+            Building visual systems, campaigns, identities and expressive creative worlds with clarity, rhythm and attitude.
+          </p>
+
+          <div class="hero-actions">
+            <a href="work.html" class="button light">View Work</a>
+            <a href="contact.html" class="button outline-light">Start a Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="section-grid">
+        <div class="section-label reveal">Introduction</div>
+
+        <div class="reveal">
+          <p class="big-copy">
+            Design that feels sharp, intentional and unmistakably alive.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section no-top">
+      <div class="section-grid">
+        <div class="section-label reveal">Selected Work</div>
+
+        <div class="work-grid">
+          <a href="work.html" class="work-card large reveal">
+            <img src="images/work-01.jpg" alt="Selected project preview">
+
+            <div class="work-info">
+              <h2 class="work-title">Brand<br>World</h2>
+              <span class="work-meta">Identity / Art Direction</span>
+            </div>
+          </a>
+
+          <a href="work.html" class="work-card small reveal">
+            <img src="images/work-02.jpg" alt="Selected project preview">
+
+            <div class="work-info">
+              <h2 class="work-title">Visual<br>System</h2>
+              <span class="work-meta">Design / Campaign</span>
+            </div>
+          </a>
+
+          <a href="work.html" class="work-card full reveal">
+            <img src="images/work-03.jpg" alt="Selected project preview">
+
+            <div class="work-info">
+              <h2 class="work-title">Creative<br>Language</h2>
+              <span class="work-meta">Concept / Direction</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="statement reveal">
+        <div class="statement-top">
+          <span>Approach</span>
+          <span>Strategy × Emotion × Form</span>
+        </div>
+
+        <h2 class="statement-title">
+          Make it clear.<br>
+          Make it bold.<br>
+          Make it stick.
+        </h2>
+
+        <div class="statement-bottom">
+          <div></div>
+
+          <p class="statement-copy">
+            I approach graphic design as a balance of structure and instinct — shaping ideas into memorable visual experiences that communicate fast and stay with people.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="section-grid">
+        <div class="section-label reveal">my expertise</div>
+
+        <div class="info-grid">
+          <article class="info-card reveal">
+            <span class="info-number">01</span>
+
+            <div>
+              <h3 class="info-title">Creative<br>Direction</h3>
+              <p class="info-description">
+                Concept development, campaign direction, mood, visual language and execution guidance.
+              </p>
+            </div>
+          </article>
+
+          <article class="info-card reveal">
+            <span class="info-number">02</span>
+
+            <div>
+              <h3 class="info-title">Brand<br>Systems</h3>
+              <p class="info-description">
+                Identity thinking, scalable design rules, typography, layouts and consistent brand worlds.
+              </p>
+            </div>
+          </article>
+
+          <article class="info-card reveal">
+            <span class="info-number">03</span>
+
+            <div>
+              <h3 class="info-title">Visual<br>Storytelling</h3>
+              <p class="info-description">
+                Turning ideas into memorable visuals across digital, social, editorial and campaign formats.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-inner reveal">
+        <h2 class="cta-title">
+          Let’s build<br>
+        something that lasts.</h2>
+
+        <div class="cta-bottom">
+          <div>
+            <a href="contact.html" class="button light">Contact Me</a>
+          </div>
+
+          <p class="cta-copy">
+            collaborations, creative direction, identity systems and visual campaigns.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Sepehr Sarempour</span>
+
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
