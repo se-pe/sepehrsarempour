@@ -10,7 +10,7 @@ function toggleMenu() {
 }
 
 document.addEventListener("keydown", function(event) {
-  if (event.key === "Escape" && menuPanel.classList.contains("is-open")) {
+  if (event.key === "Escape" && menuPanel && menuPanel.classList.contains("is-open")) {
     toggleMenu();
   }
 });
