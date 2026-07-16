@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--
+  POSTER TEMPLATE
+  Copy this file to poster-01.html, poster-02.html, etc.
+  Then replace: the <title>/meta, the hero title + text, the showcase image,
+  the description, the Details rows, and the close-up images below.
+  The showcase image is NOT clickable (it's the hero picture).
+  Every other image opens full-size when clicked.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Poster Title — Sepehr Sarempour</title>
+  <meta name="description" content="Poster by Sepehr Sarempour — short description of the concept, composition and typography." />
+
+  <!-- Open Graph / social sharing — update url + image per poster -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sepehr Sarempour" />
+  <meta property="og:title" content="Poster Title — Sepehr Sarempour" />
+  <meta property="og:description" content="Short description of this poster." />
+  <meta property="og:url" content="https://se-pe.github.io/sepehrsarempour/poster-01.html" />
+  <meta property="og:image" content="https://se-pe.github.io/sepehrsarempour/images/poster-01.jpg" />
+  <meta property="og:image:alt" content="Poster by Sepehr Sarempour" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      Sepehr<br>Sarempour
+    </a>
+
+    <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
+      <span class="menu-dot"></span>
+      Menu
+    </button>
+  </header>
+
+  <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
+
+  <aside class="menu-panel" id="menuPanel" aria-hidden="true">
+    <div class="menu-top">
+      <span class="menu-title">Navigation</span>
+      <button class="menu-close" onclick="toggleMenu()" aria-label="Close menu">×</button>
+    </div>
+
+    <nav class="menu-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="menu-footer">
+      <span>Creative Direction<br>Brand Systems<br>Visual Concepts</span>
+      <span>Available for selected<br>projects and collaborations.</span>
+    </div>
+  </aside>
+
+  <main>
+
+    <section class="hero short">
+      <div class="hero-content">
+        <h1 class="hero-title medium reveal">
+          Poster<br>Title
+        </h1>
+
+        <div class="hero-text reveal">
+          <p class="hero-kicker">
+            <a href="work.html">← Selected Work</a> / Poster
+          </p>
+
+          <p class="hero-description">
+            A one-line concept or tagline that sets up this poster.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase: the poster itself (hero picture, not clickable) -->
+    <section class="showcase poster reveal">
+      <div class="media-frame">
+        <img src="images/poster-01.jpg" alt="Poster title" />
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="section-grid">
+        <div class="section-label reveal">Overview</div>
+
+        <div class="reveal">
+          <p class="body-copy">
+            Short description of the poster — the concept, the brief, and the
+            thinking behind the composition, typography and visual rhythm.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section no-top">
+      <div class="section-grid">
+        <div class="section-label reveal">Details</div>
+
+        <div class="details reveal">
+          <div class="detail-row">
+            <div class="detail-title">Date</div>
+            <div class="pills">
+              <span class="pill">2026</span>
+            </div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-title">Category</div>
+            <div class="pills">
+              <span class="pill">Poster</span>
+              <span class="pill">Typography</span>
+            </div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-title">Tools</div>
+            <div class="pills">
+              <span class="pill">Photoshop</span>
+              <span class="pill">Illustrator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Close-ups: clickable, open full-size. Add or remove as needed. -->
+    <section class="page-section no-top">
+      <div class="section-grid">
+        <div class="section-label reveal">Close-ups</div>
+
+        <div class="reveal">
+          <div class="gallery">
+            <button class="gallery-item zoomable" type="button">
+              <div class="media-frame">
+                <img src="images/poster-01-detail-1.jpg" alt="Poster detail one" />
+              </div>
+            </button>
+
+            <button class="gallery-item zoomable" type="button">
+              <div class="media-frame">
+                <img src="images/poster-01-detail-2.jpg" alt="Poster detail two" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-inner reveal">
+        <h2 class="cta-title">
+          Like what<br>you see?
+        </h2>
+
+        <div class="cta-bottom">
+          <div>
+            <a href="contact.html" class="button light">Start a Project</a>
+          </div>
+
+          <p class="cta-copy">
+            Let’s talk about a poster, campaign, identity or visual direction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Sepehr Sarempour</span>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="work.html">Work</a>
+      <a href="https://www.instagram.com/mostdefinitelysepehr/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
