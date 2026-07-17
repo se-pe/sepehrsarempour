@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "ms-vscode.live-server",
+    "formulahendry.auto-rename-tag",
+    "kisstkondoros.vscode-gutter-preview"
+  ],
+  "unwantedRecommendations": [
+    "esbenp.prettier-vscode"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  // Long paragraphs wrap instead of running off-screen
+  "editor.wordWrap": "on",
+
+  // Never auto-reformat: this site's HTML is hand-written and formatting
+  // it would rewrite every file and bury real edits in noise.
+  "editor.formatOnSave": false,
+  "html.format.enable": false,
+
+  // Live Preview opens inside VS Code, next to the code
+  "livePreview.defaultPreviewPath": "/index.html",
+  "livePreview.openPreviewTarget": "Embedded Preview",
+
+  "files.trimTrailingWhitespace": false,
+  "files.insertFinalNewline": false
+}
