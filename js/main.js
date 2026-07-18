@@ -1,3 +1,7 @@
+// Mark that JS is running, so the CSS reveal-on-scroll only hides content
+// when it can actually reveal it again (no-JS users see everything).
+document.documentElement.classList.add("js");
+
 const menuPanel = document.getElementById("menuPanel");
 const menuBackdrop = document.getElementById("menuBackdrop");
 
