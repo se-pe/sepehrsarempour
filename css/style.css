@@ -1244,6 +1244,75 @@ html.js .reveal.is-visible {
   }
 }
 
+/* GRAIN — site-wide film texture (identity layer) */
+
+:root {
+  /* Dial this to taste — 0 disables the grain entirely */
+  --grain-opacity: 0.06;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: -10%;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  /* No blend mode on purpose: overlay/soft-light are invisible against pure
+     white and pure black, so the flat sections would get no grain at all.
+     Plain opacity renders everywhere and slightly lifts the blacks — which
+     reads as print/film rather than digital. */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  background-repeat: repeat;
+  animation: grainShift 0.7s steps(5) infinite;
+}
+
+@keyframes grainShift {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-3%, -2%); }
+  40%  { transform: translate(2%, -4%); }
+  60%  { transform: translate(-2%, 3%); }
+  80%  { transform: translate(3%, 2%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* HERO ENTRANCE — graphic clip-path wipe + staggered content */
+
+/* The photo is exposed rather than faded (Emil's image-reveal technique) */
+@keyframes heroWipe {
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero.image-hero::before {
+  animation: heroWipe 1.1s var(--ease) both;
+}
+
+/* Hero content animates on load with a stagger, so it opts out of the
+   scroll-reveal system (which would fade the whole block in as one slab) */
+html.js .hero .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.hero-title,
+.hero-kicker,
+.hero-description,
+.hero-actions {
+  animation: heroIn 0.7s var(--ease) both;
+}
+
+.hero-title       { animation-delay: 0.20s; }
+.hero-kicker      { animation-delay: 0.28s; }
+.hero-description { animation-delay: 0.36s; }
+.hero-actions     { animation-delay: 0.44s; }
+
 /* RESPONSIVE */
 
 @media (max-width: 980px) {
