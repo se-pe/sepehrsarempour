@@ -58,7 +58,7 @@ copyContactButtons.forEach((button) => {
 });
 
 // Gracefully hide empty / broken placeholder images so the grey frame shows
-const framedImages = document.querySelectorAll(".media-frame img");
+const framedImages = document.querySelectorAll(".media-frame img, .collage-piece img");
 
 framedImages.forEach((img) => {
   const markEmpty = () => img.classList.add("is-empty");
