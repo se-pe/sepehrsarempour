@@ -160,12 +160,16 @@ img {
   top: 18px;
   right: 18px;
   width: min(460px, calc(100vw - 36px));
+  /* 100vh sits *behind* mobile browser chrome, which hides the footer.
+     dvh tracks the visible viewport; vh stays as the fallback. */
   height: calc(100vh - 36px);
+  height: calc(100dvh - 36px);
   z-index: 2000;
   background: var(--black);
   color: var(--white);
   border-radius: var(--radius);
   padding: 26px;
+  padding-bottom: calc(26px + env(safe-area-inset-bottom, 0px));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -424,10 +428,10 @@ img {
      right edge, all four pieces stay in play. !important is required:
      desktop positions live in inline style attributes, which otherwise
      beat any media-query rule. */
-  .collage-piece.piece-beam     { --x: -8% !important; --y: 2%  !important; --w: 62% !important; }
-  .collage-piece.piece-portrait { --x: 20% !important; --y: 15% !important; --w: 82% !important; }
-  .collage-piece.piece-suit     { --x: 58% !important; --y: 34% !important; --w: 58% !important; }
-  .collage-piece.piece-figure   { --x: 44% !important; --y: 44% !important; --w: 56% !important; }
+  .collage-piece.piece-beam     { --x: -10% !important; --y: 9%  !important; --w: 64% !important; }
+  .collage-piece.piece-suit     { --x: 46%  !important; --y: 19% !important; --w: 68% !important; }
+  .collage-piece.piece-portrait { --x: 20%  !important; --y: 13% !important; --w: 74% !important; }
+  .collage-piece.piece-figure   { --x: 4%   !important; --y: 35% !important; --w: 66% !important; }
 }
 
 /* Moving tiled logo hero */
@@ -1479,7 +1483,11 @@ html.js .hero .reveal {
     top: 10px;
     right: 10px;
     width: calc(100vw - 20px);
-    height: calc(100vh - 20px);
+    /* Deliberately shorter than the viewport: some mobile browsers overlay
+       their toolbar on the bottom of the panel and hide the footer text.
+       The vh value is the conservative fallback for browsers without dvh. */
+    height: calc(100vh - 132px);
+    height: calc(100dvh - 92px);
   }
 
   /* Display type: shrink floors + vw scaling so long single words

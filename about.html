@@ -62,21 +62,24 @@
     <section class="hero collage-hero">
       <!-- Cutouts are square canvases with the tilt baked into the artwork,
            so no CSS rotation (--r) and a 1/1 aspect. -->
+      <!-- DOM order = stacking order: beam (back) -> suit -> portrait ->
+           figure (front, overlapping the portrait). Cutouts are square
+           canvases with the tilt baked in, so no CSS rotation. -->
       <div class="collage-stage" aria-hidden="true">
-        <div class="collage-piece piece-beam" style="--x: 29%; --y: 4%; --w: 37%; --d: 0.15s; --ar: 1/1;">
+        <div class="collage-piece piece-beam" style="--x: 20%; --y: 5%; --w: 42%; --d: 0.15s; --ar: 1/1;">
           <img src="images/about-cut-01.webp" alt="" />
         </div>
 
-        <div class="collage-piece piece-figure" style="--x: 44%; --y: 64%; --w: 27%; --d: 0.32s; --ar: 1/1;">
-          <img src="images/about-cut-04.webp" alt="" />
-        </div>
-
-        <div class="collage-piece piece-suit" style="--x: 78%; --y: 18%; --w: 30%; --d: 0.5s; --ar: 1/1;">
+        <div class="collage-piece piece-suit" style="--x: 52%; --y: 18%; --w: 46%; --d: 0.32s; --ar: 1/1;">
           <img src="images/about-cut-03.webp" alt="" />
         </div>
 
-        <div class="collage-piece piece-portrait" style="--x: 50%; --y: 8%; --w: 38%; --d: 0.68s; --ar: 1/1;">
+        <div class="collage-piece piece-portrait" style="--x: 42%; --y: 10%; --w: 48%; --d: 0.5s; --ar: 1/1;">
           <img src="images/about-cut-02.webp" alt="" />
+        </div>
+
+        <div class="collage-piece piece-figure" style="--x: 30%; --y: 45%; --w: 40%; --d: 0.68s; --ar: 1/1;">
+          <img src="images/about-cut-04.webp" alt="" />
         </div>
       </div>
 
