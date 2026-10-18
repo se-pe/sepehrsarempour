@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Sepehr Sarempour — Graphic designer</title>
-  <meta name="description" content="Sepehr Sarempour — graphic designer in Shiraz. Brand identities, posters and campaign work for commercial and cultural clients." />
+  <meta name="description" content="Sepehr Sarempour — graphic designer. Brand identities, posters and campaign work for commercial and cultural clients." />
 
   <!-- Open Graph / social sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Sepehr Sarempour" />
   <meta property="og:title" content="Sepehr Sarempour — Graphic Designer" />
-  <meta property="og:description" content="Graphic designer in Shiraz. Brand identities, posters and campaign work — for businesses, brands, film, music and editorial." />
+  <meta property="og:description" content="Graphic designer. Brand identities, posters and campaign work — for businesses, brands, film, music and editorial." />
   <meta property="og:url" content="https://se-pe.github.io/sepehrsarempour/" />
   <meta property="og:image" content="https://se-pe.github.io/sepehrsarempour/images/hero.jpg" />
   <meta property="og:image:width" content="1920" />
@@ -31,11 +31,6 @@
     "url": "https://se-pe.github.io/sepehrsarempour/",
     "image": "https://se-pe.github.io/sepehrsarempour/images/hero.jpg",
     "email": "sarempoursepehr@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Shiraz",
-      "addressCountry": "IR"
-    },
     "worksFor": {
       "@type": "Organization",
       "name": "Mahan Agency"
@@ -55,7 +50,7 @@
       Sepehr<br>Sarempour
     </a>
 
-    <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
+    <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel">
       <span class="menu-dot"></span>
       Menu
     </button>
@@ -63,7 +58,7 @@
 
   <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
 
-  <aside class="menu-panel" id="menuPanel" aria-hidden="true">
+  <aside class="menu-panel" id="menuPanel">
     <div class="menu-top">
       <span class="menu-title">Navigation</span>
       <button class="menu-close" onclick="toggleMenu()" aria-label="Close menu">×</button>
@@ -77,25 +72,26 @@
     </nav>
 
     <div class="menu-footer">
-      <span>Creative Direction<br>Brand Systems<br>Visual Concepts</span>
-      <span>Available for selected<br>projects and collaborations.</span>
+      <span>Graphic Design<br>Brand Identity<br>Image-making</span>
+      <span>Open to freelance, contract<br>and full-time remote work.</span>
     </div>
   </aside>
 
-  <main>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main id="main-content">
 
     <section class="hero image-hero home-hero">
       <div class="hero-content">
 <div class="hero-text reveal">
-        <p class="hero-kicker">Graphic designer · Shiraz</p>
+        <p class="hero-kicker"><span>Sepehr Sarempour <span aria-hidden="true">·</span></span> <span>Graphic Designer</span></p>
 
           <p class="hero-description">
-            I design brand identities, posters and campaign work. The goal is usually the same: make something recognisable quickly, then keep it consistent everywhere it turns up.
+            I create identities and images that give people a reason to look closer.
           </p>
 
           <div class="hero-actions">
             <a href="work.html" class="button light">View Work</a>
-            <a href="contact.html" class="button outline-light">Start a Project</a>
+            <a href="contact.html" class="button outline-light">Get in Touch</a>
           </div>
         </div>
       </div>
@@ -107,11 +103,11 @@
 
         <div class="reveal">
           <p class="big-copy">
-            A mark should be recognisable before anyone reads the name.
+            Each project needs its own visual logic.
           </p>
 
           <p class="body-copy" style="margin-top: 34px;">
-            That’s what I work back from, whatever the format — identity, poster, packaging or a set of social posts.
+            Sometimes the familiar approach is right. Sometimes there’s room to go in a different direction. I look at the brief, the audience and what’s already out there before deciding.
           </p>
         </div>
       </div>
@@ -119,36 +115,10 @@
 
     <section class="page-section no-top">
       <div class="section-grid">
-        <div class="section-label reveal">Selected Work</div>
-
-        <div class="work-grid">
-          <a href="work.html" class="work-card large reveal">
-            <img src="images/work-01.jpg" alt="Selected project preview">
-
-            <div class="work-info">
-              <h2 class="work-title">Brand<br>World</h2>
-              <span class="work-meta">Identity / Art Direction</span>
-            </div>
-          </a>
-
-          <a href="work.html" class="work-card small reveal">
-            <img src="images/work-02.jpg" alt="Selected project preview">
-
-            <div class="work-info">
-              <h2 class="work-title">Visual<br>System</h2>
-              <span class="work-meta">Design / Campaign</span>
-            </div>
-          </a>
-
-          <a href="work.html" class="work-card full reveal">
-            <img src="images/work-03.jpg" alt="Selected project preview">
-
-            <div class="work-info">
-              <h2 class="work-title">Creative<br>Language</h2>
-              <span class="work-meta">Concept / Direction</span>
-            </div>
-          </a>
-        </div>
+        <div class="section-label">Selected work</div>
+        <div><h2 class="big-copy">A closer look at the work.</h2>
+        <p class="body-copy">Case studies are being prepared. For a project inquiry or a relevant selection of work, get in touch.</p>
+        <a href="contact.html" class="button">Get in touch</a></div>
       </div>
     </section>
 
@@ -160,14 +130,14 @@
         </div>
 
         <h2 class="statement-title">
-          Making one good<br>piece is easy.
+          Identity, image<br>and typography.
         </h2>
 
         <div class="statement-bottom">
           <div></div>
 
           <p class="statement-copy">
-            The harder part is building a system that makes the next one just as strong — rules for type, colour and spacing, so everything that comes after still looks like it belongs.
+            I like finding an angle that isn’t obvious at first. Once the idea is working, I develop the typography, imagery and applications together, checking that the details hold up across the project.
           </p>
         </div>
       </div>
@@ -182,9 +152,9 @@
             <span class="info-number">01</span>
 
             <div>
-              <h3 class="info-title">Brand<br>Identity</h3>
+              <h3 class="info-title">Identity &amp;<br>Typography</h3>
               <p class="info-description">
-                Logo, type and colour, plus the rules that hold them together — so the brand still looks like itself when someone else makes the next post.
+                Logos, lettering and visual identities, developed through type, colour and applications that belong together.
               </p>
             </div>
           </article>
@@ -193,9 +163,9 @@
             <span class="info-number">02</span>
 
             <div>
-              <h3 class="info-title">Posters &amp;<br>Campaigns</h3>
+              <h3 class="info-title">Campaigns &amp;<br>Image-making</h3>
               <p class="info-description">
-                Single posters and full campaign sets — for businesses, brands, film, music and editorial.
+                Advertising, posters and imagery, with compositing, retouching and attention to how each image is put together.
               </p>
             </div>
           </article>
@@ -204,9 +174,9 @@
             <span class="info-number">03</span>
 
             <div>
-              <h3 class="info-title">Image &amp;<br>Content</h3>
+              <h3 class="info-title">Digital<br>Design</h3>
               <p class="info-description">
-                Product and social imagery, photo editing, and AI-assisted work where it gets to the result faster.
+                Websites and interfaces that extend an idea onto screens. I make the design and UX decisions, using AI to help implement them.
               </p>
             </div>
           </article>
@@ -226,7 +196,7 @@
           </div>
 
           <p class="cta-copy">
-            Identity, posters, packaging or ongoing content. If you’re not sure yet which one you need, that’s usually a good place to start.
+            Have a project in mind, need support for your agency, or hiring a graphic designer? I’m open to freelance projects, contract work and full-time remote roles.
           </p>
         </div>
       </div>
@@ -245,6 +215,7 @@
     </div>
   </footer>
 
+  <noscript><style>.menu-panel { visibility: visible; }</style></noscript>
   <script src="js/main.js"></script>
 
 </body>

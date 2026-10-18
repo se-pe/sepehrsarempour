@@ -30,7 +30,7 @@
       Sepehr<br>Sarempour
     </a>
 
-    <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
+    <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel">
       <span class="menu-dot"></span>
       Menu
     </button>
@@ -38,7 +38,7 @@
 
   <div class="menu-backdrop" id="menuBackdrop" onclick="toggleMenu()"></div>
 
-  <aside class="menu-panel" id="menuPanel" aria-hidden="true">
+  <aside class="menu-panel" id="menuPanel">
     <div class="menu-top">
       <span class="menu-title">Navigation</span>
       <button class="menu-close" onclick="toggleMenu()" aria-label="Close menu">×</button>
@@ -52,12 +52,13 @@
     </nav>
 
     <div class="menu-footer">
-      <span>Creative Direction<br>Brand Systems<br>Visual Concepts</span>
-      <span>Available for selected<br>projects and collaborations.</span>
+      <span>Graphic Design<br>Brand Identity<br>Image-making</span>
+      <span>Open to freelance, contract<br>and full-time remote work.</span>
     </div>
   </aside>
 
-  <main>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main id="main-content">
 
     <section class="hero compact">
       <div class="hero-content">
@@ -69,160 +70,17 @@
           <p class="hero-kicker">Portfolio</p>
 
           <p class="hero-description">
-            A selection of visual systems, brand directions, campaign concepts and creative explorations.
+            Identity, typography, campaigns, image-making and digital design.
           </p>
         </div>
       </div>
     </section>
 
     <section class="page-section">
-      <div class="section-grid">
-        <div class="section-label reveal">Projects</div>
-
-        <div class="work-grid">
-
-          <a href="project-01.html" class="work-card large reveal">
-            <img src="images/work-01.jpg" alt="Project one">
-
-            <div class="work-info">
-              <h2 class="work-title">Project<br>One</h2>
-              <span class="work-meta">Brand / Direction</span>
-            </div>
-          </a>
-
-          <a href="project-02.html" class="work-card small reveal">
-            <img src="images/work-02.jpg" alt="Project two">
-
-            <div class="work-info">
-              <h2 class="work-title">Project<br>Two</h2>
-              <span class="work-meta">Campaign / Visuals</span>
-            </div>
-          </a>
-
-          <a href="project-03.html" class="work-card full reveal">
-            <img src="images/work-03.jpg" alt="Project three">
-
-            <div class="work-info">
-              <h2 class="work-title">Project<br>Three</h2>
-              <span class="work-meta">Identity / System</span>
-            </div>
-          </a>
-
-          <a href="project-04.html" class="work-card small reveal">
-            <img src="images/work-04.jpg" alt="Project four">
-
-            <div class="work-info">
-              <h2 class="work-title">Project<br>Four</h2>
-              <span class="work-meta">Art Direction</span>
-            </div>
-          </a>
-
-          <a href="project-05.html" class="work-card large reveal">
-            <img src="images/work-05.jpg" alt="Project five">
-
-            <div class="work-info">
-              <h2 class="work-title">Project<br>Five</h2>
-              <span class="work-meta">Digital / Brand</span>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section">
-      <div class="section-grid">
-        <div class="section-label reveal">Posters</div>
-
-        <div>
-          <p class="big-copy reveal">
-            Poster explorations focused on composition, typography, visual rhythm and strong graphic impact.
-          </p>
-
-          <div class="work-grid">
-
-          <a href="poster-01.html" class="work-card large reveal">
-            <img src="images/poster-01.jpg" alt="Poster one">
-
-            <div class="work-info">
-              <h2 class="work-title">Poster<br>One</h2>
-              <span class="work-meta">Poster / Visual</span>
-            </div>
-          </a>
-
-          <a href="poster-02.html" class="work-card small reveal">
-            <img src="images/poster-02.jpg" alt="Poster two">
-
-            <div class="work-info">
-              <h2 class="work-title">Poster<br>Two</h2>
-              <span class="work-meta">Poster / Typography</span>
-            </div>
-          </a>
-
-          <a href="poster-03.html" class="work-card small reveal">
-            <img src="images/poster-03.jpg" alt="Poster three">
-
-            <div class="work-info">
-              <h2 class="work-title">Poster<br>Three</h2>
-              <span class="work-meta">Poster / Layout</span>
-            </div>
-          </a>
-
-          <a href="poster-04.html" class="work-card large reveal">
-            <img src="images/poster-04.jpg" alt="Poster four">
-
-            <div class="work-info">
-              <h2 class="work-title">Poster<br>Four</h2>
-              <span class="work-meta">Poster / Campaign</span>
-            </div>
-          </a>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section">
-      <div class="section-grid">
-        <div class="section-label reveal">AI Image Generation</div>
-
-        <div>
-          <p class="big-copy reveal">
-            Image generation studies exploring mood, form, styling, prompt direction and visual world building.
-          </p>
-
-          <div class="work-grid">
-
-          <a href="ai-01.html" class="work-card large reveal">
-            <img src="images/ai-01.jpg" alt="AI image one">
-
-            <div class="work-info">
-              <h2 class="work-title">AI<br>One</h2>
-              <span class="work-meta">AI / Image Generation</span>
-            </div>
-          </a>
-
-          <a href="ai-02.html" class="work-card small reveal">
-            <img src="images/ai-02.jpg" alt="AI image two">
-
-            <div class="work-info">
-              <h2 class="work-title">AI<br>Two</h2>
-              <span class="work-meta">AI / Concept</span>
-            </div>
-          </a>
-
-          <a href="ai-03.html" class="work-card full reveal">
-            <img src="images/ai-03.jpg" alt="AI image three">
-
-            <div class="work-info">
-              <h2 class="work-title">AI<br>Three</h2>
-              <span class="work-meta">AI / Visual Study</span>
-            </div>
-          </a>
-
-          </div>
-        </div>
-      </div>
+      <div class="section-grid"><div class="section-label">Portfolio</div>
+      <div><h2 class="big-copy">Case studies in preparation.</h2>
+      <p class="body-copy">I’m putting together a closer look at my identity, graphic design and image-making work. Contact me to discuss your brief or request a relevant selection.</p>
+      <a href="contact.html" class="button">Get in touch</a></div></div>
     </section>
 
     <section class="cta">
@@ -237,7 +95,7 @@
           </div>
 
           <p class="cta-copy">
-            Let’s talk about a visual direction, identity, campaign, website or creative system.
+            Get in touch about a project, agency collaboration, contract or full-time remote role.
           </p>
         </div>
       </div>
@@ -256,6 +114,7 @@
     </div>
   </footer>
 
+  <noscript><style>.menu-panel { visibility: visible; }</style></noscript>
   <script src="js/main.js"></script>
 
 </body>

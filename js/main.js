@@ -5,11 +5,23 @@ document.documentElement.classList.add("js");
 const menuPanel = document.getElementById("menuPanel");
 const menuBackdrop = document.getElementById("menuBackdrop");
 
+const menuTrigger = document.querySelector(".menu-button");
+let menuPreviousFocus;
+// CSS provides ordinary navigation if scripting is unavailable.
+if (menuPanel) { menuPanel.inert = true; menuPanel.setAttribute("aria-hidden", "true"); }
+
 function toggleMenu() {
+  if (!menuPanel || !menuBackdrop) return;
   const isOpen = menuPanel.classList.toggle("is-open");
 
   menuBackdrop.classList.toggle("is-open", isOpen);
   menuPanel.setAttribute("aria-hidden", !isOpen);
+  menuPanel.inert = !isOpen;
+  menuTrigger?.setAttribute("aria-expanded", String(isOpen));
+  if (isOpen) {
+    menuPreviousFocus = document.activeElement;
+    menuPanel.querySelector("button, a")?.focus();
+  } else { menuPreviousFocus?.focus(); }
   document.body.classList.toggle("menu-open", isOpen);
 }
 
@@ -19,24 +31,14 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
-const revealElements = document.querySelectorAll(".reveal");
-
-const revealObserver = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.15
-  }
-);
-
-revealElements.forEach(element => {
-  revealObserver.observe(element);
+// Content is visible by default, including when an observer fails.
+document.querySelectorAll(".reveal").forEach(element => element.classList.add("is-visible"));
+document.addEventListener("keydown", event => {
+  if (event.key !== "Tab" || !menuPanel?.classList.contains("is-open")) return;
+  const items = [...menuPanel.querySelectorAll("a[href], button")];
+  const first = items[0], last = items[items.length - 1];
+  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
 });
 const copyContactButtons = document.querySelectorAll("[data-copy]");
 
