@@ -1593,3 +1593,24 @@ html:not(.js) .menu-panel { position: relative; inset: auto; width: 100%; height
 }
 
 .home-hero .hero-kicker > span { display: inline-block; }
+
+/* Signature headline, with the existing image and personal byline. */
+.home-headline {
+  font-size: clamp(56px, 7.4vw, 112px);
+  font-weight: 800;
+  line-height: .96;
+  letter-spacing: -.05em;
+  text-transform: uppercase;
+}
+.home-hero .hero-description {
+  font-size: clamp(19px, 1.8vw, 26px);
+  line-height: 1.25;
+  max-width: 32ch;
+}
+.expertise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.expertise-grid .info-card { min-height: 260px; }
+@media (max-width: 620px) {
+  .home-headline { font-size: clamp(46px, 12vw, 74px); }
+  .expertise-grid { grid-template-columns: 1fr; }
+  .expertise-grid .info-card { min-height: 0; }
+}
